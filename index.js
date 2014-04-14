@@ -272,7 +272,7 @@ function stringifyArray(arr, prefix) {
   var ret = [];
   if (!prefix) throw new TypeError('stringify expects an object');
   for (var i = 0; i < arr.length; i++) {
-    ret.push(stringify(arr[i], prefix + '[' + i + ']'));
+    ret.push(stringify(arr[i], prefix));
   }
   return ret.join('&');
 }
